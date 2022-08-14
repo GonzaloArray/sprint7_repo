@@ -1,0 +1,242 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- Aca comienza el slider -->
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <!-- Botones Slider -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Primer Slider -->
+                <div class="carousel-item active">
+                    <!-- Fondo Imagen -->
+                    <div class="imgInforme">
+                        <img src="{% static 'img//bank.jpeg' %}" alt="informe del banco">
+                        <div class="corteImagen"></div>
+                    </div>
+                    <!-- Informe -->
+                    <div class="informeBank">
+                        <h2>¡Conocé Finanzas en Minutos!</h2>
+                        <p>Todo lo que querés saber del mundo financiero, de manera rápida, sencilla y fácil de entender
+                        </p>
+
+                        <button class="btnSlider">Conoce más</button>
+                    </div>
+                </div>
+                <!-- Segundo Slider -->
+                <div class="carousel-item">
+                    <!-- Fondo Imagen -->
+                    <div class="imgInforme">
+                        <img src="{% static 'img/acuerdo.jpg' %}" alt="informe del banco">
+                        <div class="corteImagen"></div>
+                    </div>
+                    <!-- Informe -->
+                    <div class="informeBank">
+                        <h2>Saca tu tarjeta de debito, 6 meses gratis</h2>
+                        <p>Todo lo que querés saber del mundo financiero, de manera rápida, sencilla y fácil de entender
+                        </p>
+                        <button class="btnSlider">Conoce más</button>
+                    </div>
+                </div>
+                <!-- Tercer Slider -->
+                <div class="carousel-item">
+                    <!-- Fondo Imagen -->
+                    <div class="imgInforme">
+                        <img src="{% static 'img/credit-card-g856ff4b77_1920.jpg' %}" alt="informe del banco">
+                        <div class="corteImagen"></div>
+                    </div>
+                    <!-- Informe -->
+                    <div class="informeBank">
+                        <h2>Traé tu sueldo a ITBank y disfrutá los beneficios: 50% de reintegro en Shop de Go</h2>
+                        <p>Todo lo que querés saber del mundo financiero, de manera rápida, sencilla y fácil de entender
+                        </p>
+
+                        <button class="btnSlider">Conoce más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Aca comienza el cotizador-->
+    <div class="container-xl p-3">
+        <h1 class="mb-3">Cotizador Dolar Itbank</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="cotizador card text-center">
+                    <h2 id="titulo0" class="card-header fw-bolder fs-5"></h2>
+                    <div class="compra-venta card-body d-flex p-2">
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Compra</p>
+                            <p id="compra0" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Venta</p>
+                            <p id="venta0" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                    </div>
+                    <p class="card-text m-1" id="variacion0">VARIACION: <span></span></p>
+                    <div class="card-footer text-muted">
+                        ACTUALIZADO: <span class="actualizarFecha0"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cotizador1 card text-center">
+                    <h2 id="titulo1" class="card-header fw-bolder fs-5"></h2>
+                    <div class="compra-venta1 card-body d-flex p-2">
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Compra</p>
+                            <p id="compra1" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Venta</p>
+                            <p id="venta1" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                    </div>
+                    <p class="card-text m-1" id="variacion1">VARIACION: <span></span></p>
+                    <div class="card-footer text-muted">
+                        ACTUALIZADO: <span class="actualizarFecha1"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cotizador2 card text-center">
+                    <h2 id="titulo2" class="card-header fw-bolder fs-5"></h2>
+                    <div class="compra-venta2 card-body d-flex p-2">
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Compra</p>
+                            <p id="compra2" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Venta</p>
+                            <p id="venta2" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                    </div>
+                    <p class="card-text m-1" id="variacion2">VARIACION: <span></span></p>
+                    <div class="card-footer text-muted">
+                        ACTUALIZADO: <span class="actualizarFecha2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xl p-3">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="cotizador card text-center">
+                    <h2 id="titulo3" class="card-header fw-bolder fs-5"></h2>
+                    <div class="compra-venta card-body d-flex p-2">
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Compra</p>
+                            <p id="compra3" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Venta</p>
+                            <p id="venta3" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                    </div>
+                    <p class="card-text m-1" id="variacion3">VARIACION: <span></span></p>
+                    <div class="card-footer text-muted">
+                        ACTUALIZADO: <span class="actualizarFecha3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cotizador1 card text-center">
+                    <h2 id="titulo4" class="card-header fw-bolder fs-5"></h2>
+                    <div class="compra-venta card-body p-2">
+                        <div class="d-none">
+                            <p class="m-0 fw-semibold ">Compra</p>
+                            <p id="compra4" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                        <div class="w-50 d-inline-block">
+                            <p class="m-0 fw-semibold">Venta</p>
+                            <p id="venta4" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                    </div>
+                    <p class="card-text m-1" id="variacion4">VARIACION: <span></span></p>
+                    <div class="card-footer text-muted">
+                        ACTUALIZADO: <span class="actualizarFecha4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cotizador2 card text-center">
+                    <h2 id="titulo5" class="card-header fw-bolder fs-5"></h2>
+                    <div class="compra-venta card-body p-2">
+                        <div class="d-none">
+                            <p class="m-0 fw-semibold ">Compra</p>
+                            <p id="compra5" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+
+                        <div class="d-block">
+                            <p class="m-0 fw-semibold">Venta</p>
+                            <p id="venta5" class="m-0 fs-4 text-dark fw-bolder">$ <span></span></p>
+                        </div>
+                    </div>
+                    <p class="card-text m-1" id="variacion5">VARIACION: <span></span></p>
+                    <div class="card-footer text-muted">
+                        ACTUALIZADO: <span class="actualizarFecha5"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- aca termina el cotizador-->
+
+    <!-- Comienza el desarrollo GRID -->
+    <section class="sectionGrid bs-danger">
+        <div class="informeGrid">
+            <!-- Imagen -->
+            <div class="imagenGridWpp">
+            </div>
+            <!-- Titulo -->
+            <div class="informacionGrid">
+                <h2>Potenciá tú PYME con ITBANK</h2>
+                <!-- Parrafo -->
+                <p>Ahora podés chatear con nosotros por WhatsApp para agilizar tú consulta.</p>
+                <a href="#">Consultanos</a>
+            </div>
+        </div>
+
+        <div class="informeGrid">
+            <!-- Imagen -->
+            <div class="imagenGridInversiones">
+            </div>
+            <!-- Titulo -->
+            <div class="informacionGrid">
+                <h2>Potenciá tú PYME con ITBANK</h2>
+                <!-- Parrafo -->
+                <p>Ahora podés chatear con nosotros por WhatsApp para agilizar tú consulta.</p>
+                <a href="#">Consultanos</a>
+            </div>
+
+        </div>
+
+        <div class="informeGrid ">
+            <!-- Imagen -->
+            <div class="imagenGridSucursales">
+            </div>
+            <!-- Titulo -->
+            <div class="informacionGrid">
+                <h2>Potenciá tú PYME con ITBANK</h2>
+                <!-- Parrafo -->
+                <p>Ahora podés chatear con nosotros por WhatsApp para agilizar tú consulta.</p>
+                <a href="#">Consultanos</a>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock content %}
