@@ -27,7 +27,7 @@
 
 <body class="indexBody">
     <div class="homeBanking">
-        <a href="#">Home banking</a>
+        <a href="{% url 'homeBanking' %}">Home banking</a>
     </div>
 
     <!-- Navegador -->
@@ -43,34 +43,31 @@
                 <div class="collapse navbar-collapse colorText" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="./html/homebanking.html">Home Banking</a>
+                            <a class="nav-link" href="{% url 'preguntas' %}">Preguntas Frecuentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./html/preguntas.html">Preguntas Frecuentes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./html/turnos-online.html">Turnos Online</a>
+                            <a class="nav-link" href="{% url 'turnosOnline' %}">Turnos Online</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="./html/productos.html" id="navbarDropdown"
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                             <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="./html/tarjetas.html">Tarjetas</a>
+                                    <a class="dropdown-item" href="{% url 'tarjetas' %}">Tarjetas</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./html/cuenta.html">Cuentas</a>
+                                    <a class="dropdown-item" href="#">Cuentas</a>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./html/prestamos.html">Préstamos</a>
+                                    <a class="dropdown-item" href="#">Préstamos</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                    <a class="align-center text-black fs-3" href="./html/ingresarUsuario"><i
+                    <a class="align-center text-black fs-3"  href="{% url 'homeBanking' %}"><i
                             class="fa-solid fa-user"></i></a>
                 </div>
             </div>
