@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% block title %}Login{% endblock title %}
+{% block content %}
+    <div class="volverIndex">
+        <a href="{% url 'index' %}">Volver</a>
+    </div>
+
+    <div class="bdHomeBanking">
+        <h1>ITBANK</h1>
+        <form id="#formulario" class="formulario-input errorMensaje form" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Usuario" id="usuario">
+            <input type="password" name="password" placeholder="Contraseña" id="contrasena">
+            <input type="submit" value="ingresar">
+            {% if form.non_field_errors %}
+                <p style="color:red">Usuario o contraseña incorrectos, prueba de nuevo.</p>
+            {% endif %}
+            <p><a href="{% url 'password_reset' %}">Olvido su contraseña?</a></p>
+        </form>
+        <div class="mensajeError"></div>
+    </div>
+{% endblock content %}
